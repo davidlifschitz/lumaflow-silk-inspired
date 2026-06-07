@@ -1,0 +1,17 @@
+{
+  "name": "lumaflow-silk-inspired",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A front-end-only generative symmetry art MVP inspired by silk-style drawing interactions, without using Silk branding or assets.",
+  "scripts": {
+    "start": "python3 -m http.server 5173"
+  },
+  "keywords": [
+    "generative-art",
+    "canvas",
+    "symmetry",
+    "drawing",
+    "creative-coding"
+  ],
+  "license": "MIT"
+}

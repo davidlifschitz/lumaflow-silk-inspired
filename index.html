@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>LumaFlow — Generative Symmetry Art</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <canvas id="artCanvas" aria-label="Generative art canvas"></canvas>
+
+    <section class="topbar" aria-label="App controls">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <div>
+          <h1>LumaFlow</h1>
+          <p>Draw mirrored light patterns</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="undoBtn" title="Undo last stroke">Undo</button>
+        <button id="clearBtn" title="Clear canvas">Clear</button>
+        <button id="exportBtn" class="primary" title="Save as PNG">Save PNG</button>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Brush settings">
+      <label>
+        Tool
+        <select id="toolInput">
+          <option value="brush" selected>Brush</option>
+          <option value="erase">Eraser</option>
+        </select>
+      </label>
+
+      <label>
+        Symmetry
+        <select id="symmetryInput">
+          <option value="2">2-way</option>
+          <option value="4" selected>4-way</option>
+          <option value="6">6-way</option>
+          <option value="8">8-way</option>
+          <option value="12">12-way</option>
+        </select>
+      </label>
+
+      <label class="inline-check">
+        <input id="mirrorInput" type="checkbox" checked /> Mirror
+      </label>
+
+      <label>
+        Brush
+        <input id="sizeInput" type="range" min="1" max="18" value="6" />
+      </label>
+
+      <label>
+        Glow
+        <input id="glowInput" type="range" min="0" max="36" value="18" />
+      </label>
+
+      <label>
+        Palette
+        <select id="paletteInput">
+          <option value="aurora" selected>Aurora</option>
+          <option value="ember">Ember</option>
+          <option value="ocean">Ocean</option>
+          <option value="orchid">Orchid</option>
+          <option value="moon">Moon</option>
+        </select>
+      </label>
+
+      <label class="inline-check">
+        <input id="rainbowInput" type="checkbox" /> Rainbow
+      </label>
+
+      <button id="audioBtn" title="Toggle soft ambient tone">Sound Off</button>
+    </section>
+
+    <aside class="hint" aria-label="Usage hint">
+      Drag to draw · Z undo · Space clear · S save
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
